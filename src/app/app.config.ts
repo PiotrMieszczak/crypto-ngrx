@@ -7,6 +7,7 @@ import { taskReducer, TaskEffects } from './+state/task';
 import { provideHttpClient } from '@angular/common/http';
 import { TaskDataService } from './services';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { API_URL } from './injectables';
 
 
 export const appConfig: ApplicationConfig = {
@@ -17,6 +18,7 @@ export const appConfig: ApplicationConfig = {
     provideStore({ tasks: taskReducer }),
     provideEffects([TaskEffects]),
     provideStoreDevtools({ logOnly: !isDevMode() }),
-    TaskDataService
+    TaskDataService,
+    { provide: API_URL, useValue: 'http://localhost:3000/tasks' },
   ],
 };
