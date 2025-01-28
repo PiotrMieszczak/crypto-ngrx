@@ -2485,6 +2485,41 @@
     "@emnapi/runtime" "^1.1.0"
     "@tybys/wasm-util" "^0.9.0"
 
+"@ngrx/component-store@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/component-store/-/component-store-19.0.0.tgz#cbb87803669bcfa98da84ecdb8e872fddfd68293"
+  integrity sha512-qi9gvEGeEvxgpR5mFp33dZD8l3PSERnVtJdGQ30OZQYzGK0ILcq1e2ZxnRx54eu4Oka55riTMOo/9li9+UwMxg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/effects@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/effects/-/effects-19.0.0.tgz#1b763db4dc9f410eec2726aeec34606ed31ad2a4"
+  integrity sha512-McNrbaPoDUlukrVPAckpRYLFSOoHwMQgMaiiNUvIGJuH/S1Wja+0xAT/e7+h+SO6xaFqDiEqj7GiR8lPkIAnVw==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/entity@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/entity/-/entity-19.0.0.tgz#ae531d92cb20ee3c4d36a2821eb0267ae8713e3c"
+  integrity sha512-qHMgR46YYm1ysEe2hwwTj5Gq6aAg9AxLLMtnBtsUWG6+UKk9irSCl6EoT7QteUGYImNK6LO1wiwapoNgFMr8dg==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store-devtools@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store-devtools/-/store-devtools-19.0.0.tgz#cab1738750e2d2a8dd44bd452fc658e0b8c0e93a"
+  integrity sha512-ZlnvWx1mYzZnnwEnMLMv2xDwK/IPN7bZ/901e6kwISKn+9HliC5Z4GzAhaRP/8iq0gAHvmMdBlrcvJrKmBVBSQ==
+  dependencies:
+    tslib "^2.0.0"
+
+"@ngrx/store@^19.0.0":
+  version "19.0.0"
+  resolved "https://registry.yarnpkg.com/@ngrx/store/-/store-19.0.0.tgz#22e0874e5586374fde4be264ca624769042cd767"
+  integrity sha512-AaryTJF1DsXUVWFhCl833LhvjyPjDOAMX9tqGBDfYGhaNOWWX3q/3z5HQ0XCrJ8kDJN3EHiNQa3XHxFaFQUo9A==
+  dependencies:
+    tslib "^2.0.0"
+
 "@ngtools/webpack@19.1.4":
   version "19.1.4"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-19.1.4.tgz#3062b99456c600039a3b5def867efd548bef15e2"
