@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit, inject } from "@angular/core";
+import { TaskFacade } from "src/app/+state/task";
+
 
 @Component({
     selector: 'app-task-list',
@@ -7,6 +9,18 @@ import { Component, ChangeDetectionStrategy } from "@angular/core";
     standalone: true,
     changeDetection: ChangeDetectionStrategy.OnPush
   })
-  export class TaskListComponent { 
+  export class TaskListComponent implements OnInit { 
+    private readonly facade = inject(TaskFacade);
 
+    tasks$ = this.facade.tasks$;
+    loading$ = this.facade.loading$;
+
+
+    ngOnInit() {
+      this.load();
+    }
+  
+    load() {
+      this.facade.loadTasks();
+    }
   }

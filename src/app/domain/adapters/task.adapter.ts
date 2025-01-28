@@ -1,8 +1,10 @@
 import { TaskDTO } from "../dto";
 import { Task } from "../models";
 
-export function createTask(taskDTO: TaskDTO): Task {
-    return {
-        ...taskDTO
+export class TaskAdapter {
+    public static createTask(taskDTO: TaskDTO): Task {
+        return {
+            ...taskDTO
+        }
     }
 }

@@ -1,0 +1,1 @@
+export type TaskFailurePayload = {error: string}
