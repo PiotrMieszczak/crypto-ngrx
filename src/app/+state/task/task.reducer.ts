@@ -18,14 +18,14 @@ export const initialState: TaskState = {
 export const taskReducer = createReducer(
   initialState,
   on(TaskActions.getTasks, state => ({ ...state, loading: true })),
-  on(TaskActions.getTasksSuccess, (state, { tasks }) => ({
+  on(TaskActions.getTasksSuccess, (state, { payload }) => ({
     ...state,
     loading: false,
-    tasks: tasks.map(dto => TaskAdapter.createTask(dto))
+    tasks: payload.map(dto => TaskAdapter.createTask(dto))
   })),
-  on(TaskActions.getTasksFailure, (state, { error }) => ({
+  on(TaskActions.getTasksFailure, (state, { payload }) => ({
     ...state,
     loading: false,
-    error,
+    error: payload.error,
   }))
 );
