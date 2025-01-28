@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "start:api": "cd src/app && json-server --watch mocks/db.json --port 3000",
+    "start:app": "nx serve",
+    "start:all": "concurrently \"yarn start:api\" \"yarn start:app\""
   },
   "private": true,
   "dependencies": {
@@ -51,6 +51,7 @@
     "@types/node": "18.16.9",
     "@typescript-eslint/utils": "^8.19.0",
     "angular-eslint": "^19.0.2",
+    "concurrently": "^9.1.2",
     "cypress": "^13.13.0",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^9.0.0",
