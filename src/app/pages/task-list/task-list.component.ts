@@ -17,10 +17,6 @@ import { TaskFacade } from "src/app/+state/task";
 
 
     ngOnInit() {
-      this.load();
-    }
-  
-    load() {
       this.facade.loadTasks();
     }
   }
