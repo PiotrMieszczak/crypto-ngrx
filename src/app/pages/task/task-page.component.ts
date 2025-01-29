@@ -20,6 +20,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
     error = toSignal(this.facade.error$, { initialValue: '' });
 
     ngOnInit() {
-      this.facade.loadTasks();
+      this.facade.getTasks();
     }
   }

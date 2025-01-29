@@ -12,7 +12,7 @@ export class TaskFacade {
   loading$ = this.store.select<boolean>(TaskSelectors.selectLoading);
   error$ = this.store.select<string>(TaskSelectors.selectError);
  
-  loadTasks(): void {
+  getTasks(): void {
     this.store.dispatch(TaskActions.getTasks());
   }
 }
