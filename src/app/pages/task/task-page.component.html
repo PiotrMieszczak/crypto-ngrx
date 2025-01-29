@@ -1,0 +1,5 @@
+@if (!(loading())) {
+    <app-task-table [tasks]="tasks()"></app-task-table>
+} @else {
+    <app-loader></app-loader>
+}

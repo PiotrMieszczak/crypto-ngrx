@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+        <th>Task title</th>
+        <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (task of tasks(); track task.id) {
+        <tr>
+            <td>{{ task.title }}</td>
+            <td>{{ task.completed ? '✅ Done' : '⏳ Pending' }}</td>
+        </tr>
+        }
+    </tbody>
+</table>
+@if (tasks().length > 0) {
+<p>
+    Completed Tasks: <strong>{{ completedTasks() }}</strong>
+</p>  
+}

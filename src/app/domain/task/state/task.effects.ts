@@ -2,12 +2,12 @@ import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as TaskActions from './task.actions';
 import { catchError, map, mergeMap, of } from 'rxjs';
-import { TaskDataService } from 'src/app/services';
+import { TaskApiService } from 'src/app/services';
 
 
 @Injectable()
 export class TaskEffects {
-  private readonly taskService = inject(TaskDataService);
+  private readonly taskService = inject(TaskApiService);
   private readonly actions$ = inject(Actions);
 
   loadTasks$ = createEffect(() =>

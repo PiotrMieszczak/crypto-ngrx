@@ -1,7 +1,7 @@
 import { createAction, props } from '@ngrx/store';
-import { TaskDTO } from 'src/app/domain/dto';
-import { ActionPayload } from 'src/app/domain/interfaces/action-payload.interface';
-import { TaskFailurePayload } from 'src/app/domain/payloads';
+import { TaskDTO } from 'src/app/domain/task/dto';
+import { ActionPayload } from 'src/app/domain/task/interfaces/action-payload.interface';
+import { TaskFailurePayload } from 'src/app/domain/task/payloads';
 
 
 export const GET_TASKS = '[Tasks] Get Tasks';
