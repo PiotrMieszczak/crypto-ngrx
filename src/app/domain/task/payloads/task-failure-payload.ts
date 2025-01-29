@@ -1,1 +1,4 @@
-export type TaskFailurePayload = {error: string}
+export type TaskFailurePayload = {
+    message: string;
+    status: number;
+  };

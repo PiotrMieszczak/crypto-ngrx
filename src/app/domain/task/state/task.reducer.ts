@@ -6,13 +6,13 @@ import { TaskAdapter } from 'src/app/domain/task/adapters/task.adapter';
 export interface TaskState {
   tasks: Task[];
   loading: boolean;
-  error: string | null;
+  error: string;
 }
 
 export const initialState: TaskState = {
   tasks: [],
   loading: false,
-  error: null
+  error: ''
 };
 
 export const taskReducer = createReducer(
@@ -26,6 +26,6 @@ export const taskReducer = createReducer(
   on(TaskActions.getTasksFailure, (state, { payload }) => ({
     ...state,
     loading: false,
-    error: payload.error,
+    error: `Error ${payload.status}: ${payload.message}`,
   }))
 );

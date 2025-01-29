@@ -19,7 +19,11 @@ export class TaskEffects {
             return TaskActions.getTasksSuccess({payload})
           }),
           catchError((error) =>
-            of(TaskActions.getTasksFailure(error))
+            of(TaskActions.getTasksFailure({payload: {
+              message: error?.error?.message || 'An unknown error occurred',
+              status: error.status || 500,
+            }
+            }))
           )
         )
       )
