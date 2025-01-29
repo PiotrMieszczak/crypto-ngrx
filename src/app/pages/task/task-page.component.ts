@@ -7,7 +7,6 @@ import {
 import { TaskFacade } from 'src/app/domain/task/state';
 import { ErrorComponent, LoaderComponent } from 'src/app/shared/components';
 import { TaskTableComponent } from './components/task-table.component';
-import { toSignal } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-task-page',
@@ -20,9 +19,9 @@ import { toSignal } from '@angular/core/rxjs-interop';
 export class TaskPageComponent implements OnInit {
   private readonly facade = inject(TaskFacade);
 
-  tasks = toSignal(this.facade.tasks$, { initialValue: [] });
-  loading = toSignal(this.facade.loading$, { initialValue: true });
-  error = toSignal(this.facade.error$, { initialValue: '' });
+  tasks = this.facade.tasks;
+  loading = this.facade.loading;
+  error = this.facade.error;
 
   ngOnInit() {
     this.facade.getTasks();
