@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import * as TaskActions from './task.actions';
-import { catchError, map, mergeMap, of } from 'rxjs';
+import { catchError, exhaustMap, map, of } from 'rxjs';
 import { TaskApiService } from 'src/app/services';
 
 
@@ -13,7 +13,7 @@ export class TaskEffects {
   loadTasks$ = createEffect(() =>
     this.actions$.pipe(
       ofType(TaskActions.getTasks),
-      mergeMap(() =>
+      exhaustMap(() =>
         this.taskService.getTasks().pipe(
           map((payload) => {
             return TaskActions.getTasksSuccess({payload})

@@ -1,5 +1,5 @@
 import { inject, Injectable } from "@angular/core";
-import { delay, Observable, of } from "rxjs";
+import { delay, Observable } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { TaskDTO } from "../domain/task/dto";
 import { API_URL } from "../injectables";
