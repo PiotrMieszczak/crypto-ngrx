@@ -13,7 +13,7 @@ export class TaskApiService {
 
   getTasks(): Observable<TaskDTO[]> {
     return this.http.get<TaskDTO[]>(this.apiUrl).pipe(
-      delay(10000)
+      delay(2000)
     );
   }
 }
