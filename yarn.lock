@@ -7681,6 +7681,11 @@ jest-leak-detector@^29.7.0:
     jest-get-type "^29.6.3"
     pretty-format "^29.7.0"
 
+jest-marbles@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/jest-marbles/-/jest-marbles-3.1.0.tgz#586122a5e3757a95dc593cc075572709631e9acd"
+  integrity sha512-coNktwFLnBLgx9oUJmhefgP2gJpN5sCEhlGYZOy8buUvMe+Xz0YnTLRV079ysO8ROv4stRpZwzkbzo86oDDhqA==
+
 jest-matcher-utils@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-29.7.0.tgz#ae8fec79ff249fd592ce80e3ee474e83a6c44f12"
