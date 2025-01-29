@@ -5,7 +5,10 @@
   "scripts": {
     "start:api": "cd src/app && json-server --watch mocks/db.json --port 3000",
     "start:app": "nx serve",
-    "start:all": "concurrently \"yarn start:api\" \"yarn start:app\""
+    "start:all": "concurrently \"yarn start:api\" \"yarn start:app\"",
+    "test:watch": "npx nx test --watch",
+    "test:coverage": "npx nx test --code-coverage",
+    "test:all": "npx nx run-many --target=test"
   },
   "private": true,
   "dependencies": {
