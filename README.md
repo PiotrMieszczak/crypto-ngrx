@@ -7,19 +7,20 @@
 ## **🚀 Running the Project**
 
 This project includes both a **mock API (JSON Server)** and an **Angular application**.
+Project runs at port `4200`, API server at `3000`
 
 ```sh
 yarn run start:all
 ```
 
-### **Start API Only or Start App Only**
+### **start API only or start App only**
 
 ```sh
 yarn run start:app
 yarn run start:api
 ```
 
-## **🧪 Running Tests**
+## **🧪 Running tests**
 
 ```sh
 yarn run test:all
