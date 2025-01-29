@@ -1,7 +1,7 @@
 @if (error() && !loading()) {
-    <app-error [message]="error()"></app-error>
+<app-error [message]="error()"></app-error>
 } @else if(loading() && !error()){
-    <app-loader></app-loader>
+<app-loader></app-loader>
 } @else {
-    <app-task-table [tasks]="tasks()"></app-task-table>
+<app-task-table [tasks]="tasks()"></app-task-table>
 }

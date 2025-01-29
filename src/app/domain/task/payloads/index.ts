@@ -1,1 +1,1 @@
-export * from './task-failure-payload'
+export * from './task-failure-payload';

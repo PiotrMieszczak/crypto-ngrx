@@ -9,7 +9,8 @@
     "test:watch": "npx nx test --watch",
     "test:coverage": "npx nx test --code-coverage",
     "test:all": "npx nx run-many --target=test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "npx prettier --write"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx}": "eslint --fix",

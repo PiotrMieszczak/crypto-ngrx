@@ -6,7 +6,7 @@ describe('Task Selectors', () => {
   const state: TaskState = {
     tasks: mockTasks,
     loading: true,
-    error: 'error'
+    error: 'error',
   };
 
   it('should select tasks', () => {

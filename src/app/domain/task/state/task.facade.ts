@@ -11,7 +11,7 @@ export class TaskFacade {
   tasks$ = this.store.select<Task[]>(TaskSelectors.selectTasks);
   loading$ = this.store.select<boolean>(TaskSelectors.selectLoading);
   error$ = this.store.select<string>(TaskSelectors.selectError);
- 
+
   getTasks(): void {
     this.store.dispatch(TaskActions.getTasks());
   }

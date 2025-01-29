@@ -5,12 +5,12 @@ import { provideEffects } from '@ngrx/effects';
 import { TaskEffects, taskReducer } from './domain/task/state';
 
 export const appRoutes: Route[] = [
-    {
-      path: '',
-      component: TaskPageComponent,
-      providers: [
-        provideState({ name: 'tasks', reducer: taskReducer }),
-        provideEffects([TaskEffects])
-      ]
-    }
+  {
+    path: '',
+    component: TaskPageComponent,
+    providers: [
+      provideState({ name: 'tasks', reducer: taskReducer }),
+      provideEffects([TaskEffects]),
+    ],
+  },
 ];

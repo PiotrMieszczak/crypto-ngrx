@@ -3,6 +3,15 @@ import { TaskState } from './task.reducer';
 
 export const selectTaskState = createFeatureSelector<TaskState>('tasks');
 
-export const selectTasks = createSelector(selectTaskState, state => state.tasks);
-export const selectLoading = createSelector(selectTaskState, state => state.loading);
-export const selectError = createSelector(selectTaskState, state => state.error);
+export const selectTasks = createSelector(
+  selectTaskState,
+  (state) => state.tasks
+);
+export const selectLoading = createSelector(
+  selectTaskState,
+  (state) => state.loading
+);
+export const selectError = createSelector(
+  selectTaskState,
+  (state) => state.error
+);

@@ -1,4 +1,8 @@
-import { ApplicationConfig, isDevMode, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  isDevMode,
+  provideZoneChangeDetection,
+} from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { provideEffects } from '@ngrx/effects';
@@ -8,7 +12,6 @@ import { provideHttpClient } from '@angular/common/http';
 import { TaskApiService } from './services';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { API_URL } from './injectables';
-
 
 export const appConfig: ApplicationConfig = {
   providers: [

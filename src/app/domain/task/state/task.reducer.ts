@@ -12,16 +12,16 @@ export interface TaskState {
 export const initialState: TaskState = {
   tasks: [],
   loading: false,
-  error: ''
+  error: '',
 };
 
 export const taskReducer = createReducer(
   initialState,
-  on(TaskActions.getTasks, state => ({ ...state, loading: true })),
+  on(TaskActions.getTasks, (state) => ({ ...state, loading: true })),
   on(TaskActions.getTasksSuccess, (state, { payload }) => ({
     ...state,
     loading: false,
-    tasks: payload.map(dto => TaskAdapter.createTask(dto))
+    tasks: payload.map((dto) => TaskAdapter.createTask(dto)),
   })),
   on(TaskActions.getTasksFailure, (state, { payload }) => ({
     ...state,

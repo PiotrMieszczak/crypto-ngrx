@@ -46,10 +46,10 @@ describe('Task Effects', () => {
     });
 
     it('should dispatch getTasksFailure action on API error', () => {
-        const mockHttpError = {
-            error: { message: 'Error occurred' },
-            status: 500,
-          };
+      const mockHttpError = {
+        error: { message: 'Error occurred' },
+        status: 500,
+      };
       const action = TaskActions.getTasks();
       const result = TaskActions.getTasksFailure({
         payload: {
@@ -66,12 +66,11 @@ describe('Task Effects', () => {
       expect(effects.loadTasks$).toBeObservable(expected);
     });
 
-    
     it('should handle unknown error and dispatch getTasksFailure with default values', () => {
-        const mockUnknownError = {
-            error: 'Error occurred',
-            status: 500
-          };
+      const mockUnknownError = {
+        error: 'Error occurred',
+        status: 500,
+      };
       const action = TaskActions.getTasks();
       const result = TaskActions.getTasksFailure({
         payload: {
@@ -84,7 +83,12 @@ describe('Task Effects', () => {
       const response = cold('-#|', {}, mockUnknownError);
       taskService.getTasks.mockReturnValue(response);
 
-      const expected = cold('--c', { c: {...result, payload: {status: 500, message: "An unknown error occurred"}} });
+      const expected = cold('--c', {
+        c: {
+          ...result,
+          payload: { status: 500, message: 'An unknown error occurred' },
+        },
+      });
       expect(effects.loadTasks$).toBeObservable(expected);
     });
   });

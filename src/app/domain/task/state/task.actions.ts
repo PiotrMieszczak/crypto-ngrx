@@ -10,11 +10,11 @@ export const GET_TASKS_FAILURE = '[Tasks] Get Tasks Failure';
 export const getTasks = createAction(GET_TASKS);
 
 export const getTasksSuccess = createAction(
-    GET_TASKS_SUCCESS,
+  GET_TASKS_SUCCESS,
   props<ActionPayload<TaskDTO[]>>()
 );
 
 export const getTasksFailure = createAction(
-    GET_TASKS_FAILURE,
+  GET_TASKS_FAILURE,
   props<ActionPayload<TaskFailurePayload>>()
 );

@@ -1,5 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import {
+  HttpTestingController,
+  provideHttpClientTesting,
+} from '@angular/common/http/testing';
 import { TaskApiService } from './task-api.service';
 import { API_URL } from '../injectables';
 import { TaskDTO } from '../domain/task/dto';
@@ -16,8 +19,8 @@ describe('TaskApiService', () => {
         TaskApiService,
         provideHttpClient(),
         provideHttpClientTesting(),
-        { provide: API_URL, useValue: mockApiUrl }
-      ]
+        { provide: API_URL, useValue: mockApiUrl },
+      ],
     });
 
     service = TestBed.inject(TaskApiService);
@@ -35,7 +38,7 @@ describe('TaskApiService', () => {
   it('should fetch tasks from the API', (done) => {
     const mockTasks: TaskDTO[] = [
       { id: 1, title: 'Task 1', completed: false },
-      { id: 2, title: 'Task 2', completed: true }
+      { id: 2, title: 'Task 2', completed: true },
     ];
 
     service.getTasks().subscribe((tasks) => {
@@ -55,10 +58,13 @@ describe('TaskApiService', () => {
         expect(error.status).toBe(500);
         expect(error.statusText).toBe('Internal Server Error');
         done();
-      }
+      },
     });
 
     const req = httpMock.expectOne(mockApiUrl);
-    req.flush('Server error', { status: 500, statusText: 'Internal Server Error' });
+    req.flush('Server error', {
+      status: 500,
+      statusText: 'Internal Server Error',
+    });
   });
 });
